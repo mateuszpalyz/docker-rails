@@ -1,0 +1,15 @@
+<table class="table">
+  <thead>
+    <th scope="col">Name</th>
+    <th scope="col">Created at</th>
+  </thead>
+  <tbody>
+    <% @things.each do |thing| %>
+      <tr>
+        <td><%= thing.name %></td>
+        <td><%= thing.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'New Thing', new_thing_path, class: 'btn btn-primary float-right' %>
